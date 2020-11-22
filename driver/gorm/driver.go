@@ -97,6 +97,7 @@ func (d Driver) generateCondition(typ cursor.Type, values map[string]interface{}
 	return s, args
 }
 
+// TODO: debug here
 func (d Driver) Paginate(c cursor.Cursor, input interface{}) (driver.Page, error) {
 	tx := input.(*gorm.DB)
 

@@ -52,6 +52,24 @@ func main() {
 		CreatedAt: base.Add(6 * time.Hour),
 	})
 
+	db.Create(&User{
+		Name:      "u5",
+		Id:        uuid.NewV4().String(),
+		CreatedAt: base.Add(7 * time.Hour),
+	})
+
+	db.Create(&User{
+		Name:      "u6",
+		Id:        uuid.NewV4().String(),
+		CreatedAt: base.Add(9 * time.Hour),
+	})
+
+	db.Create(&User{
+		Name:      "u8",
+		Id:        uuid.NewV4().String(),
+		CreatedAt: base.Add(10 * time.Hour),
+	})
+
 	// Define the pagination criteria
 	pg := paginator.New(paginator.Options{
 		Driver: gorm.Driver{
